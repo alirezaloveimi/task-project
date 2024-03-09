@@ -1,0 +1,47 @@
+/* modal transition classes start */
+
+.modal-enter {
+  opacity: 0;
+  visibility: hidden;
+}
+.modal-enter-active {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease;
+}
+.modal-exit {
+  opacity: 1;
+  visibility: visible;
+}
+.modal-exit-active {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+/* modal transition classes end */
+
+/* table start */
+
+.table-wrapper {
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+/* table end */
+
+/* chart start */
+
+.apexcharts-tooltip-series-group {
+  gap: 10px;
+}
+
+/* chart end */
+
+/* map start */
+
+.gm-style-cc {
+  display: none !important;
+}
+
+/* map end */

@@ -1,0 +1,96 @@
+/* add style.css for custom styles */
+@import url("./Style.css");
+
+/* Tailwind classes */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* vazir font */
+@font-face {
+  font-family: "vazir";
+  src: url("./../Assets/Fonts/Vazir-Light.woff2") format("woff2");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "vazir";
+  src: url("./../Assets/Fonts/Vazir.woff2") format("woff2");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "vazir";
+  src: url("./../Assets/Fonts/Vazir-Medium.woff2") format("woff2");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "vazir";
+  src: url("./../Assets/Fonts/Vazir-Bold.woff2") format("woff2");
+  font-weight: 700;
+}
+
+:root {
+  --primary-color: #4a6dff;
+  --modal-overlay-color: #00000080;
+
+  /* secondary */
+}
+
+/* Tailwind layers */
+@layer base {
+  body {
+    font-family: "vazir", sans-serif;
+    font-weight: 400;
+    overflow-x: hidden;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold;
+  }
+  input {
+    @apply outline-none;
+  }
+  th,
+  td {
+    @apply border-b border-[#e0e0e0] text-sm p-4 text-right;
+  }
+  th {
+    @apply font-bold;
+  }
+}
+
+@layer utilities {
+  .grid-center {
+    @apply grid place-content-center;
+  }
+  .flex-align-center {
+    @apply flex items-center;
+  }
+  .flex-center-between {
+    @apply flex justify-between items-center;
+  }
+  .flex-center-center {
+    @apply flex justify-center items-center;
+  }
+  .transition-ease-300 {
+    @apply transition-all ease-ease duration-300;
+  }
+}
+
+@layer components {
+  .container {
+    @apply w-full sm:w-[540px] md:w-[720px] lg:w-[960px] xl:w-[1140px] 2xl:w-[1320px];
+  }
+  .table-btn {
+    @apply w-9 h-9 rounded-full text-white text-xl;
+  }
+  .modal-btn {
+    @apply py-2 px-6 text-white rounded-lg;
+  }
+  .modal-input {
+    @apply w-full border p-3 text-sm rounded-lg;
+  }
+}
